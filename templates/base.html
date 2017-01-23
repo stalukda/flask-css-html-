@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>{% block title %}TITLE HERE{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="static/styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="row">
+      <div class="col-xs-offset-4 col-xs-2" style="padding-bottom: 50px"> 
+        <h1> <img id="logo" src=http://www.fastmoving.co.za/img/activitylinks/938_squish-logo/squish_logo_link.jpg "></h1>
+      </div>
+    </div>
+
+    {% block content %} BODY CONTENT HERE {% endblock %}   
+ 
+    <div class="row">
+      <div class="col-xs-offset-5 col-xs-2" style="padding-bottom: 50px">
+      <footer> 2017 Squish, Inc. </footer> 
+      </div>
+    </div>
+
+
+</body>
+
+</html>

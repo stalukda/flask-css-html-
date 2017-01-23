@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Application Response {% endblock %}
+
+{% block content %}
+      <div id= "profile">
+        <p> Way to go {{ first_name }} {{ last_name }}! </p>
+        {% if jobs %}
+            <p> Thanks for applying for the following: </p>
+            <ul> 
+            {% for job in jobs %}
+                <li> {{ job }} </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        <p> Your minimum salary requirement is {{ salary_req }}. </p>
+
+        <div class="container fluid">
+            <div class="row">
+            <div class="col-xs-offset-3 col-xs-6"> 
+            <img src="http://www.pvfarms.com/images/ourproduce_cantaloupe.png" alt="Cantaloupe" style="width:100%;">
+            </div>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+

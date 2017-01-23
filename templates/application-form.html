@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Submit your Application Form! {% endblock %}
+
+{% block content %}
+
+    <div id= "instructions">
+        <p>Step right up to submit your application form for a few tech positions.</p>
+    </div>
+
+    <div id= "employment_form">
+      <form action="/application-success" method="POST">
+        <br><br><br>
+        <label for="first_name">First Name:</label>
+        <input id="first_name" type="text" name="first_name">
+
+        <label for="last_name">Last Name:</label>
+        <input id="last_name" type="text" name="last_name">
+
+        <label for="salary_req">Salary Requirement:</label>
+        <input id="salary_req" type="number" name="salary_req"><br><br> 
+
+        <fieldset>
+        <legend>Choose your preferred job or jobs:</legend>
+        <input id="software_engineer" type="checkbox" name="jobs" value="software_engineer">
+        <label for="qa_engineer">Software Engineer</label><br>
+        <input id="qa_engineer" type="checkbox" name="jobs" value="qa_engineer">
+        <label for="qa_engineer">QA Engineer</label><br>
+        <input id="product_manager" type="checkbox" name="jobs" value="product_manager">
+        <label for="product_manager">Product Manager</label><br>
+        </fieldset>
+        
+        <input type="submit">
+
+      </form>
+    </div>
+
+
+{% endblock %}
